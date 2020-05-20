@@ -1,8 +1,92 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body>
-    Hello!
-  </body>
+
+<head>
+	<meta name="description" content="One-handed speedsolving method YruRU">
+	<meta name="keywords" content="OH, Rubik's cube, One handed, method, YruRU">
+  	<meta name="author" content="Yash Mehta">
+	
+	<title>YruRU</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<header>
+      <div class="container">
+        <div id="branding">
+          <h1><span class="highlight">YruRU</span> Method</h1>
+        </div>
+
+        <nav>
+          <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="cpline.html">CP-Line</a></li>
+            <li><a href="peoext.html">pEO-extension</a></li>
+            <li><a href="eobf.html">EOBF</a></li>
+            <li><a href="f2l.html">F2L</a></li>
+            <li><a href="2gll">2GLL</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="boxes">
+    	<div class="container">
+    		<div class="box">
+    			<center><a href="cpline.html"><img src="Images/cpline.png"></a></center>
+    			<h3>CP-Line</h3>
+    			<p>A 1x1x3 block is solved in the bottom-left of the cube while solving corner permutation using F move triggers. This step takes 4-6 moves on average, and following this step the entire cube is solved using [r, u, R, U].</p>
+    		</div>
+    
+    		<div class="box">
+    			<center><a href="peoext.html"><img src="Images/peoext.png"></a></center>
+    			<h3>pEO Extension</h3>
+    			<p>The line is extended to form a 1x2x3 block while orienting 2-3 of the remaining edges, ensuring one of the oriented edges ends up in DB. This step takes 7-9 moves on average, and following this step the entire cube is solved using [r, R, U].</p>
+    		</div>
+
+    		<div class="box">
+    			<center><a href="eo.html"><img src="Images/eobf.png"></a></center>
+    			<h3>EOBF</h3>
+    			<p>The 1x2x3 block is extended to form a 2x2x3 block while orienting all of the remaining edges. This step takes 9-12 moves on average, and following this step the entire cube is solved using [R, U].</p>
+    		</div>
+
+    		<div class="box">
+    			<center><a href="f2l.html"><img src="Images/Finish.png"></a></center>
+    			<h3>2-gen Finish</h3>
+    			<p>The rest of the cube is solved, usually by solving a 1x2x3 block on top or on right like in ZZ, followed by executing one of 84 2GLL algorithms. This step takes 25-28 moves on average during a speedsolve.</p>
+    		</div>
+    	</div>
+    </section>
+
+    <section id="bar">
+    	<div class="container">
+    		<div class="info">
+    			<p>Movecount: 45 - 55
+    		</div>
+
+    		<div class="info">
+    			<p>Average non-[r, R, U] moves: 5
+    		</div>
+
+    		<div class="info">
+    			<p>Algorithms: 84
+    		</div>
+    	</div>
+    </section>
+
+    <section id="rest">
+    	<div class="container">
+    		<p>YruRU (pronounced Why-Roo-Roo) is a 3x3x3 method designed specifically for One-Handed Solving. It is a CP-first method that relies on reduced move-sets to ensure great ergonomics for OH turning, while maintaining a fairly low movecount. A mostly brain-dead skeleton of this method allows room for lookahead and mid-solve optimisations. The latter half of the solve, movecount-wise, consists solely of [R, U] moves, enabling the solver to turn at their maximum TPS without worrying about rotations or regrips whatsoever.</p>
+
+    		<p>The steps are broken down and explained in depth in the beginner and advanced sections in each of the drop-down menus at the top of the page, simply hover over the step you would like to learn. Algorithms other than 2GLL are not necessary to be memorised, however it is recommended to do so to aid recognition, efficiency and TPS.</p>
+    	</div>
+    </section>
+
+	<footer>
+		<div class="container">
+    		<p>For potential extensions, improvements or corrections, contact: yashovardhanmehta@gmail.com</p>
+    	</div>
+    </footer>
+</body>
 </html>
