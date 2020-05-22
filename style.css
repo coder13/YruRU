@@ -18,7 +18,7 @@ ul{
 }
 
 
-/* Header **/
+/* Header */
 header{
   background:#35424a;
   color:#ffffff;
@@ -59,8 +59,37 @@ header .highlight, header .current a{
   font-weight:bold;
 }
 
-header a:hover{
+header .dropdown:hover .primary{
   color:#cccccc;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #47535d;
+  min-width: 150px;
+  border-top:#e8491d 3px solid;
+  border-bottom:#e8491d 3px solid;
+  box-shadow: 0px 8px 16px 8px rgba(0,0,0,0.4);
+}
+
+.dropdown-content .secondary {
+  color: #ffffff;
+  word-spacing: 0.1em;
+  font-family: serif;
+  font-size: 15px;
+  font-weight:bolder;
+  padding: 3px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content .secondary:hover {
+  background-color: #69747f;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 
@@ -70,12 +99,13 @@ header a:hover{
   padding-top:40px;
   padding-bottom:20px;
   background-color: #ffffff;
+  margin:auto;
 }
 
 #boxes .box{
   float:left;
   text-align: justify;
-  width:25%;
+  width:24.9%;
   padding:20px;
   box-sizing: border-box;
 }
@@ -85,7 +115,7 @@ header a:hover{
   text-align: center;
 }
 
-#boxes .box h3{
+#boxes .box h3, #boxes .box h5{
   text-align: center;
 }
 
@@ -131,7 +161,6 @@ footer{
 @media(max-width: 1100px){
   header #branding,
   header nav,
-  header nav li,
   #boxes .box,
   #bar .info{
     float:none;
