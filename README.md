@@ -1,2 +1,2 @@
 # YruRU
-An OH specific speed-solving framework
+An OH-specific speedsolving framework
