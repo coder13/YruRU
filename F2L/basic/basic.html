@@ -3,7 +3,7 @@
 
 <head>
 	<meta name="description" content="One-handed speedsolving method YruRU">
-	<meta name="keywords" content="Antisune, 2GLL, OH, Rubik's cube, One handed, method, YruRU">
+	<meta name="keywords" content="O, EPLL, 2GLL, OH, Rubik's cube, One handed, method, YruRU">
   	<meta name="author" content="Yash Mehta">
 	
 	<title>YruRU</title>
@@ -59,7 +59,7 @@
                 </div>
             </li>
             
-            <li>
+            <li class="current">
                 <div class="dropdown">
                     <a class="primary" href="../../F2L/basic/basic.html">F2L</a>
                     <div class="dropdown-content">
@@ -70,7 +70,7 @@
                 </div>
             </li>
             
-            <li class="current">
+            <li>
                 <div class="dropdown">
                     <a class="primary" href="../../2GLL/beginners/beginners.html">2GLL</a>
                     <div class="dropdown-content">
@@ -97,95 +97,53 @@
       </div>
     </header>
 
-    <section id="boxes">
+        <section id="boxes">
         <div class="container">
             <div class="box">
                 <center><img src="a.png"></center>
-                <h5>(U) R U' R2 U' R U' R' U2 R' U2 R' U' R U' R2</h5>
+                <h3>EO-CP-2x2x3</h3>
+                <p>This is where one is expected to end up after successfully doing the first three steps. With the R and U layers remaining, edges oriented and corners permuted, the rest of the cube can be solved using only R and U moves. This is typically done as F2L followed by LL.</p>
             </div>
-
+    
             <div class="box">
                 <center><img src="b.png"></center>
-                <h5>(U) R U2 R2 U' R2 U' R' U R' U R</h5>
+                <h3>Square</h3>
+                <p>A 2x2x1 block is constructed on the first two layers. This can be done by connecting one edge with the right centre, followed by the solving of a corner-edge pair. The edge can usually be connected such that we get an easy corner-edge pair case.</p>
             </div>
-    
-            <div class="box">
-                <center><img src="c.png"></center>
-                <h5>(U) R2 U R U R2 U' R' U' R2 U' R U' R'</h5>
-            </div>
-    
-            <div class="box">
-                <center><img src="d.png"></center>
-                <h5>(U') R U R' U R U2 R' U R' U2 R U R' U R</h5>
-            </div>
-    
-            <div class="box">
-                <center><img src="e.png"></center>
-                <h5>R' U' R2 U R2 U R2 U2 R2 U2 R</h5>
-            </div>
-    
-            <div class="box">
-                <center><img src="f.png"></center>
-                <h5>(U) R U2 R' U' R U' R'</h5>
-            </div>
-    
-            <div class="box">
-                <center><img src="g.png"></center>
-                <h5>R U2 R2 U2 R2 U R2 U R2 U' R'</h5>
-            </div>
-    
-            <div class="box">
-                <center><img src="h.png"></center>
-                <h5>R' U' R U' R' U2 R</h5>
-            </div> 
 
             <div class="box">
-                <center><img src="i.png"></center>
-                <h5>R2 U R2 U R' U' R2 U R2 U' R U' R2</h5>
+                <center><img src="c.png"></center>
+                <h3>F2L</h3>
+                <p>The final corner edge pair is solved, typically intuitively. However, this can also be broken down into 20 cases. This is less than the typical CFOP last slot since EO is already done. The algorithms for each case can be found in the F2L algorithms section.</p>
             </div>
-    
+
             <div class="box">
-                <center><img src="j.png"></center>
-                <h5>(U) R2 U' R U R U R' U2 R U R2 U R2</h5>
+                <center><img src="d.png"></center>
+                <h3>2GLL</h3>
+                <p>Since CP and EO are already done, the last layer can be done using one of only 84 algorithms, all of which are 2-gen. Every case and beginners' recognition techniques are listed in the 2GLL section. Different ways to finish can be found in the advanced section.</p>
             </div>
-    
-            <div class="box">
-                <center><img src="k.png"></center>
-                <h5>(U') R2 U' R U' R2 U R2 U' R' U R2 U R2</h5>
-            </div>
-    
-            <div class="box">
-                <center><img src="l.png"></center>
-                <h5>(U) R2 U R2 U R U2 R' U R U R U' R2</h5>
-            </div>    
         </div>
     </section>
 
     <section id="bar">
         <div class="container">
             <div class="info">
-                <p>Average movecount: 11.8</p>
+                <p>Average movecount: ~ 14
             </div>
 
             <div class="info">
-                <p>Average double turns: 3.6</p>
+                <p>Average double moves: ~ 4
             </div>
 
             <div class="info">
-                <p>Algorithms: 12</p>
+                <p>Algorithms: 20
             </div>
         </div>
     </section>
 
     <section id="rest">
         <div class="container">
-            <p>There are two cases with 3 1x2 blocks, these are the simple sune cases.</p>
-            <p>If there is a large 2x2 block, it is a pure twist case. If in its place there is a 1x2 block but no other blocks (2 cases), then we have a cyclic shift of the bruno algorithm.</p>
-            <p>If there are no blocks (3 cases), then we either have an H-perm pattern in the 2x2 block, or depending on where the the opposites on the 2x2 block are, we have to do an algorithm that starts and ends with an R2.</p>
-            <p>There is one case with 2 blocks opposite each other. All other cases (three cases) have one block in locations other than the 2x2, and all these algorithms start with an R2.</p>
-
-            <p>Note, these rules are only to make learning of these cases simpler. For speed, a better recognition system is to be adopted.</p>
-
+            <p>If no F2L block is preserved at the end of the EOBF step, the square can be constructed using any F2L edge, connected with an adjacent corner edge pair. The sole edge needs to be attached to the right centre and placed down such that the following corner edge pair is set up to a good case, with a possibility of cancellations into insertion of the pair. There isn't exactly a practical algorithmic way to do this, experience and analysis of examples will over time build the repertoire required to handle each case almost optimally. The general rule of thumb is, 3 move inserts are better than split pairs in top layer, which are in turn better than incorrectly connected pairs in the top layer, which are better than pairs with one piece not in the top layer, and so on.</p>
         </div>
     </section>
 
