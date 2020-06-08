@@ -149,6 +149,37 @@ header .dropdown:hover .primary{
   text-align: justify;
 }
 
+#rest table{
+  text-align: center;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border: 2px solid black;
+  width:80%;
+  margin:15px;
+}
+
+#rest thead{
+  border:2px solid black;
+  background-color: #aaaaaa;
+}
+
+#rest th, #rest td {
+  border-right:2px solid black;
+}
+
+#rest th:nth-child(5){
+  width:50%;
+}
+
+#rest tr td:nth-child(1){
+  font-weight: bold;
+  letter-spacing: 0.2em;
+}
+
+#rest tbody tr:nth-child(even){
+  background: #cccccc;
+}
+
 footer{
   padding:0px;
   margin-top:20px;

@@ -2,12 +2,12 @@
 <html>
 
 <head>
-	<meta name="description" content="One-handed speedsolving method YruRU">
-	<meta name="keywords" content="O, EPLL, 2GLL, OH, Rubik's cube, One handed, method, YruRU">
-  	<meta name="author" content="Yash Mehta">
-	
-	<title>YruRU</title>
-	<link rel="stylesheet" type="text/css" href="../../style.css">
+    <meta name="description" content="One-handed speedsolving method YruRU">
+    <meta name="keywords" content="CP-line, CP-first, OH, Rubik's cube, One handed, method, YruRU">
+    <meta name="author" content="Yash Mehta">
+    
+    <title>YruRU</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
 </head>
 
 <body>
@@ -25,7 +25,7 @@
                 </div>
             </li>
             
-            <li>
+            <li class="current">
                 <div class="dropdown">
                     <a class="primary" href="../../CPLINE/numsys/numsys.html">CP-Line</a>
                     <div class="dropdown-content">
@@ -61,7 +61,7 @@
                 </div>
             </li>
             
-            <li class="current">
+            <li>
                 <div class="dropdown">
                     <a class="primary" href="../../F2L/basic/basic.html">F2L</a>
                     <div class="dropdown-content">
@@ -105,30 +105,30 @@
       </div>
     </header>
 
-        <section id="boxes">
+    <section id="boxes">
         <div class="container">
             <div class="box">
                 <center><img src="a.png"></center>
-                <h3>EO-CP-2x2x3</h3>
-                <p>This is where one is expected to end up after successfully doing the first three steps. With the R and U layers remaining, edges oriented and corners permuted, the rest of the cube can be solved using only R and U moves. This is typically done as F2L followed by LL.</p>
+                <h3>Locate Swap Pair</h3>
+                <p>If the DL corners are not correctly permuted (i.e. DBL is solved by definition but DFR is not in its spot), then the tracing is done assuming that the corner belonging to DFL is numbered the same as the corner currently in DFL (which say is X). Now, based on the table given in the beginners' tracing section and the CP case we get for the solve, we must locate the corner that needs to be swapped with X. Thus, here, instead of having 3 swapping options, we will have only one.</p>
             </div>
     
             <div class="box">
                 <center><img src="b.png"></center>
-                <h3>Square</h3>
-                <p>A 2x2x1 block is constructed on the first two layers. This can be done by connecting one edge with the right centre, followed by the solving of a corner-edge pair. The edge can usually be connected such that we get an easy corner-edge pair case.</p>
+                <h3>Solving CP</h3>
+                <p>Once the corner that belongs in DFL and the swap partner of X have been located, they must be set up such that the corner belonging to DFL is either an F, F2 or an F' away from being solved, and the swap partner of X is in UBR. One such possibility is shown in the image above. Note, this must be done while preserving the CP case, i.e. using only R, U and slice moves. Once this set up is achieved, execute the F, F2 and F' to solve the DL corners; this will solve CP as well.</p>
             </div>
 
             <div class="box">
                 <center><img src="c.png"></center>
-                <h3>F2L</h3>
-                <p>The final corner edge pair is solved, typically intuitively. However, this can also be broken down into 20 cases. This is less than the typical CFOP last slot since EO is already done. The algorithms for each case can be found in the F2L algorithms section.</p>
+                <h3>Special Case</h3>
+                <p>It may happen that the DL corners are not correctly permuted, however the CP is solved (i.e. tracing gives the sequence 12). Thus, we do not have any corner to place in the UBR position and solve as mentioned. In this case, set up the corner that belongs in DFL an F2 away from being solved (as shown in the figure above), while preserving CP; then do <b>F U F</b> or <b>F' R' F'</b> to solve the DL corners while maintaining CP. [One can also set up an F or F' away and do <b>F U' F U' F'</b> or <b>F' R F' R F</b> respectively.]</p>
             </div>
 
             <div class="box">
                 <center><img src="d.png"></center>
-                <h3>2GLL</h3>
-                <p>Since CP and EO are already done, the last layer can be done using one of only 84 algorithms, all of which are 2-gen. Every case and beginners' recognition techniques are listed in the 2GLL section. Different ways to finish can be found in the advanced section.</p>
+                <h3>Nightmare Case</h3>
+                <p>If the DFL corner is twisted in place, then simply pick another orientation to solve since these cases are rare and inefficient. However, for an x2 y2 neutral solver, once every ~2000 solves, it may happen that all DL corner pairs are permuted correctly but twisted in place. In such a scenario, one could do normal tracing to get CP, and place a corner swap pair in UFL and DFR while preserving CP, then do one of the following depending on the direction of twist: either <b>F2 R’ F R’ F R’ F</b> or <b>F2 U F’ U F’ U F</b></p>
             </div>
         </div>
     </section>
@@ -136,22 +136,23 @@
     <section id="bar">
         <div class="container">
             <div class="info">
-                <p>Average movecount: ~ 14
+                <p>Average movecount: 4 - 5
             </div>
 
             <div class="info">
-                <p>Average double moves: ~ 4
+                <p>Average double moves: ~ 1
             </div>
 
             <div class="info">
-                <p>Algorithms: 20
+                <p>Algorithms: 0
             </div>
         </div>
     </section>
 
     <section id="rest">
         <div class="container">
-            <p>If no F2L block is preserved at the end of the EOBF step, the square can be constructed using any F2L edge, connected with an adjacent corner edge pair. The sole edge needs to be attached to the right centre and placed down such that the following corner edge pair is set up to a good case, with a possibility of cancellations into insertion of the pair. There isn't exactly a practical algorithmic way to do this, experience and analysis of examples will over time build the repertoire required to handle each case almost optimally. The general rule of thumb is, 3 move inserts are better than split pairs in top layer, which are in turn better than incorrectly connected pairs in the top layer, which are better than pairs with one piece not in the top layer, and so on.</p>
+            <p>These situations are relatively less efficient compared to if DL corners are solved, since we have 3 swap options in that case while we only have one in this case. However, most of the cases with DL corners unsolved can be done 2-gen (i.e. with F-U or F-R moves only) which can greatly help TPS and lookahead. The nightmare cases can however take over 8 moves and thus must be avoided at all costs by simply solving in another orientation.</p>
+            <p>Again, we can use wide moves wherever necessary to simultaneously solve the DL edge. This is a difficult step to get a hang of, and it is strongly recommended to check out example solves.</p>
         </div>
     </section>
 

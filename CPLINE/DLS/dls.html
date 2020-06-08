@@ -2,12 +2,12 @@
 <html>
 
 <head>
-	<meta name="description" content="One-handed speedsolving method YruRU">
-	<meta name="keywords" content="O, EPLL, 2GLL, OH, Rubik's cube, One handed, method, YruRU">
-  	<meta name="author" content="Yash Mehta">
-	
-	<title>YruRU</title>
-	<link rel="stylesheet" type="text/css" href="../../style.css">
+    <meta name="description" content="One-handed speedsolving method YruRU">
+    <meta name="keywords" content="CP-line, CP-first, OH, Rubik's cube, One handed, method, YruRU">
+    <meta name="author" content="Yash Mehta">
+    
+    <title>YruRU</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
 </head>
 
 <body>
@@ -25,7 +25,7 @@
                 </div>
             </li>
             
-            <li>
+            <li class="current">
                 <div class="dropdown">
                     <a class="primary" href="../../CPLINE/numsys/numsys.html">CP-Line</a>
                     <div class="dropdown-content">
@@ -61,7 +61,7 @@
                 </div>
             </li>
             
-            <li class="current">
+            <li>
                 <div class="dropdown">
                     <a class="primary" href="../../F2L/basic/basic.html">F2L</a>
                     <div class="dropdown-content">
@@ -105,30 +105,30 @@
       </div>
     </header>
 
-        <section id="boxes">
+    <section id="boxes">
         <div class="container">
             <div class="box">
                 <center><img src="a.png"></center>
-                <h3>EO-CP-2x2x3</h3>
-                <p>This is where one is expected to end up after successfully doing the first three steps. With the R and U layers remaining, edges oriented and corners permuted, the rest of the cube can be solved using only R and U moves. This is typically done as F2L followed by LL.</p>
+                <h3>Swap UFL-UFR</h3>
+                <p>If a pair of corners that need to be swapped are in these positions, they can be swapped using <b>F' U' F</b>. Any or all of these moves can also be wide moves to better place the DL edge to solve it quicker.</p>
             </div>
     
             <div class="box">
                 <center><img src="b.png"></center>
-                <h3>Square</h3>
-                <p>A 2x2x1 block is constructed on the first two layers. This can be done by connecting one edge with the right centre, followed by the solving of a corner-edge pair. The edge can usually be connected such that we get an easy corner-edge pair case.</p>
+                <h3>Swap UFR-UBR</h3>
+                <p>If a pair of corners that need to be swapped are in these positions, they can be swapped using <b>F' U F</b> or <b>F R' F'</b>. Any or all of these moves can also be wide moves to better place the DL edge to solve it quicker.</p>
             </div>
 
             <div class="box">
                 <center><img src="c.png"></center>
-                <h3>F2L</h3>
-                <p>The final corner edge pair is solved, typically intuitively. However, this can also be broken down into 20 cases. This is less than the typical CFOP last slot since EO is already done. The algorithms for each case can be found in the F2L algorithms section.</p>
+                <h3>Swap UBR-UBL</h3>
+                <p>If a pair of corners that need to be swapped are in these positions, they can be swapped using <b>F R  F'</b>. Any or all of these moves can also be wide moves to better place the DL edge to solve it quicker.</p>
             </div>
 
             <div class="box">
                 <center><img src="d.png"></center>
-                <h3>2GLL</h3>
-                <p>Since CP and EO are already done, the last layer can be done using one of only 84 algorithms, all of which are 2-gen. Every case and beginners' recognition techniques are listed in the 2GLL section. Different ways to finish can be found in the advanced section.</p>
+                <h3>Preserve CP</h3>
+                <p>If the CP state needs to be preserved (this may be required while setting up the swap corners to appropriate locations or solving the DL edge), any moves that are a combination of R, U and all slices are allowed.</p>
             </div>
         </div>
     </section>
@@ -136,22 +136,62 @@
     <section id="bar">
         <div class="container">
             <div class="info">
-                <p>Average movecount: ~ 14
+                <p>Average movecount: 4 - 5
             </div>
 
             <div class="info">
-                <p>Average double moves: ~ 4
+                <p>Average double moves: ~ 1
             </div>
 
             <div class="info">
-                <p>Algorithms: 20
+                <p>Algorithms: 0
             </div>
         </div>
     </section>
 
     <section id="rest">
         <div class="container">
-            <p>If no F2L block is preserved at the end of the EOBF step, the square can be constructed using any F2L edge, connected with an adjacent corner edge pair. The sole edge needs to be attached to the right centre and placed down such that the following corner edge pair is set up to a good case, with a possibility of cancellations into insertion of the pair. There isn't exactly a practical algorithmic way to do this, experience and analysis of examples will over time build the repertoire required to handle each case almost optimally. The general rule of thumb is, 3 move inserts are better than split pairs in top layer, which are in turn better than incorrectly connected pairs in the top layer, which are better than pairs with one piece not in the top layer, and so on.</p>
+            <p>The first step, CP-Line, involves solving a 1x1x3 bar in DL while solving corner permutation. If the DL corners are already solved (as they are about 40% of the times for an x2 y neutral solver, and about 25% of the time for an x2 y2 neutal solver), after identifying the corner pair options that can be swapped, any one pair of corners can be set up to one of the above configurations using R, U and slice moves, and the corresponding trigger can be done to solve CP while keeping the DL corners solved. The trigger can have wide moves as and when necessary to ensure efficiency of solving the DL edge. While the knwledge of only one trigger is sufficient to solve CP (especially since the configurations are only a U move away from each other), having multiple triggers at our disposal can help affect the DL edge in various ways.</p>
+            <p>While the above summarises how each of the four triggers works, an advanced solver may get some help from the following table. Most users will however not require the following on any account.</p>
+
+                        <table>
+                <thead>
+                    <tr>
+                        <th>Trigger</th>
+                        <th>Swap Setup 1</th>
+                        <th>Swap Setup 2</th>
+                        <th>Swap Setup 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>F' U' F</td>
+                        <td>UFR - UFL</td>
+                        <td>UBR - DBR</td>
+                        <td>UBL - DFR</td>
+                    </tr>
+                    <tr>
+                        <td>F' U F</td>
+                        <td>UFR - UBR</td>
+                        <td>UBL - DBR</td>
+                        <td>UFL - DFR</td>
+                    </tr>
+                    <tr>
+                        <td>F R F'</td>
+                        <td>UBR - UBL</td>
+                        <td>UFR - DFR</td>
+                        <td>UFL - DBR</td>
+                    </tr>
+                    <tr>
+                        <td>F R' F'</td>
+                        <td>UFR - UBR</td>
+                        <td>UBL - DFR</td>
+                        <td>UFL - DBR</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>This is a difficult step to get a hang of, and it is strongly recommended to check out example solves.</p>
         </div>
     </section>
 

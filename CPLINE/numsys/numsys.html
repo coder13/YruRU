@@ -2,12 +2,12 @@
 <html>
 
 <head>
-	<meta name="description" content="One-handed speedsolving method YruRU">
-	<meta name="keywords" content="O, EPLL, 2GLL, OH, Rubik's cube, One handed, method, YruRU">
-  	<meta name="author" content="Yash Mehta">
-	
-	<title>YruRU</title>
-	<link rel="stylesheet" type="text/css" href="../../style.css">
+    <meta name="description" content="One-handed speedsolving method YruRU">
+    <meta name="keywords" content="CP-line, CP-first, OH, Rubik's cube, One handed, method, YruRU">
+    <meta name="author" content="Yash Mehta">
+    
+    <title>YruRU</title>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
 </head>
 
 <body>
@@ -25,7 +25,7 @@
                 </div>
             </li>
             
-            <li>
+            <li class="current">
                 <div class="dropdown">
                     <a class="primary" href="../../CPLINE/numsys/numsys.html">CP-Line</a>
                     <div class="dropdown-content">
@@ -61,7 +61,7 @@
                 </div>
             </li>
             
-            <li class="current">
+            <li>
                 <div class="dropdown">
                     <a class="primary" href="../../F2L/basic/basic.html">F2L</a>
                     <div class="dropdown-content">
@@ -105,30 +105,58 @@
       </div>
     </header>
 
-        <section id="boxes">
+    <section id="boxes">
         <div class="container">
             <div class="box">
-                <center><img src="a.png"></center>
-                <h3>EO-CP-2x2x3</h3>
-                <p>This is where one is expected to end up after successfully doing the first three steps. With the R and U layers remaining, edges oriented and corners permuted, the rest of the cube can be solved using only R and U moves. This is typically done as F2L followed by LL.</p>
+                <center><img src="1.png"></center>
+                <h3>Corner "1"</h3>
+                <p>As long as the bottom colour is yellow, this corner will be numbered "1" irrespective of the orientation along Y axis.</p>
             </div>
     
             <div class="box">
-                <center><img src="b.png"></center>
-                <h3>Square</h3>
-                <p>A 2x2x1 block is constructed on the first two layers. This can be done by connecting one edge with the right centre, followed by the solving of a corner-edge pair. The edge can usually be connected such that we get an easy corner-edge pair case.</p>
+                <center><img src="2.png"></center>
+                <h3>Corner "2"</h3>
+                <p>As long as the bottom colour is yellow, this corner will be numbered "2" irrespective of the orientation along Y axis.</p>
             </div>
 
             <div class="box">
-                <center><img src="c.png"></center>
-                <h3>F2L</h3>
-                <p>The final corner edge pair is solved, typically intuitively. However, this can also be broken down into 20 cases. This is less than the typical CFOP last slot since EO is already done. The algorithms for each case can be found in the F2L algorithms section.</p>
+                <center><img src="3.png"></center>
+                <h3>Corner "3"</h3>
+                <p>As long as the bottom colour is yellow, this corner will be numbered "3" irrespective of the orientation along Y axis.</p>
             </div>
 
             <div class="box">
-                <center><img src="d.png"></center>
-                <h3>2GLL</h3>
-                <p>Since CP and EO are already done, the last layer can be done using one of only 84 algorithms, all of which are 2-gen. Every case and beginners' recognition techniques are listed in the 2GLL section. Different ways to finish can be found in the advanced section.</p>
+                <center><img src="4.png"></center>
+                <h3>Corner "4"</h3>
+                <p>As long as the bottom colour is yellow, this corner will be numbered "4" irrespective of the orientation along Y axis.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="boxes">
+        <div class="container">
+            <div class="box">
+                <center><img src="5.png"></center>
+                <h3>Corner "5"</h3>
+                <p>The corner that belongs in DFR when the line is held in DL will be numbered "5". This depends on the orientation of the line along Y axis and can change from solve to solve despite having yellow bottom.</p>
+            </div>
+    
+            <div class="box">
+                <center><img src="6.png"></center>
+                <h3>Corner "6"</h3>
+                <p>The corner that belongs in DFL when the line is held in DL will be numbered "6". This depends on the orientation of the line along Y axis and can change from solve to solve despite having yellow bottom.</p>
+            </div>
+
+            <div class="box">
+                <center><img src="odd_even.png"></center>
+                <h3>Position Parity</h3>
+                <p>The pink positions in the above image are called odd positions and the blue positions in the above image are called even positions. The line is supposed to be in DL; and there are 3 positions of each parity.</p>
+            </div>
+
+            <div class="box">
+                <center><img src="friends.png"></center>
+                <h3>Friends</h3>
+                <p>There are three pairs of friends in the 6 remaining corners given the line is held in DL, as shown in the image above. The friend pairs are UFL-UBL, UBR-UFR and DFR-DBR.
             </div>
         </div>
     </section>
@@ -136,22 +164,23 @@
     <section id="bar">
         <div class="container">
             <div class="info">
-                <p>Average movecount: ~ 14
+                <p>Average movecount: 4 - 5
             </div>
 
             <div class="info">
-                <p>Average double moves: ~ 4
+                <p>Average double moves: ~ 1
             </div>
 
             <div class="info">
-                <p>Algorithms: 20
+                <p>Algorithms: 0
             </div>
         </div>
     </section>
 
     <section id="rest">
         <div class="container">
-            <p>If no F2L block is preserved at the end of the EOBF step, the square can be constructed using any F2L edge, connected with an adjacent corner edge pair. The sole edge needs to be attached to the right centre and placed down such that the following corner edge pair is set up to a good case, with a possibility of cancellations into insertion of the pair. There isn't exactly a practical algorithmic way to do this, experience and analysis of examples will over time build the repertoire required to handle each case almost optimally. The general rule of thumb is, 3 move inserts are better than split pairs in top layer, which are in turn better than incorrectly connected pairs in the top layer, which are better than pairs with one piece not in the top layer, and so on.</p>
+            <p>This is the basic numbering system that one will require to know to understand the beginner and advanced corner tracing. The idea is to identify the CP case using this numbering system, and make a 1x1x3 block in DL while solving the CP case. Each case will be solved by "swapping" a pair of corners.</p>
+            <p>A similar numbering of corners from 1 to 4 can be done on the yellow face as well if you wish to be x2 neutral; however the numbering must be clockwise for left-handed OH solvers. It may be tempting to be x2 y neutral (i.e. have 8 possible starts), however it is strongly recommended to be x2 y2 neutral (i.e. have only 4 possible starts) since this speeds up all four steps in the method to varying degrees.</p>
         </div>
     </section>
 

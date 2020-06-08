@@ -3,7 +3,7 @@
 
 <head>
 	<meta name="description" content="One-handed speedsolving method YruRU">
-	<meta name="keywords" content="O, EPLL, 2GLL, OH, Rubik's cube, One handed, method, YruRU">
+	<meta name="keywords" content="pEO-extension, beginners, OH, Rubik's cube, One handed, method, YruRU">
   	<meta name="author" content="Yash Mehta">
 	
 	<title>YruRU</title>
@@ -38,7 +38,7 @@
                 </div>
             </li>
             
-            <li>
+            <li class="current">
                 <div class="dropdown">
                     <a class="primary" href="../../PEOEXT/beginners/beginners.html">pEO-extension</a>
                     <div class="dropdown-content">
@@ -61,7 +61,7 @@
                 </div>
             </li>
             
-            <li class="current">
+            <li>
                 <div class="dropdown">
                     <a class="primary" href="../../F2L/basic/basic.html">F2L</a>
                     <div class="dropdown-content">
@@ -109,26 +109,26 @@
         <div class="container">
             <div class="box">
                 <center><img src="a.png"></center>
-                <h3>EO-CP-2x2x3</h3>
-                <p>This is where one is expected to end up after successfully doing the first three steps. With the R and U layers remaining, edges oriented and corners permuted, the rest of the cube can be solved using only R and U moves. This is typically done as F2L followed by LL.</p>
+                <h3>Pre-setup</h3>
+                <p>After CP-line, we aim to get the left centre on the right face; and the LF and LB edges that make up the 1x2x3 block, in the top layer. One strategy to do this is to first get the centre to the right face using r and u moves, then bring one of the two edges to the top layer using r moves (or occasionally u and R moves), then place this edge in UL using U moves and finally bring the other edge to the top layer using r moves (or occasionally u and R moves).</p>
             </div>
     
             <div class="box">
                 <center><img src="b.png"></center>
-                <h3>Square</h3>
-                <p>A 2x2x1 block is constructed on the first two layers. This can be done by connecting one edge with the right centre, followed by the solving of a corner-edge pair. The edge can usually be connected such that we get an easy corner-edge pair case.</p>
+                <h3>Setup</h3>
+                <p>One of the 1x2x3 edges is to be attached to the centre. This can usually be done simply using a U move, or it may require first placing an edge in UF and doing u' R u. It needs to be ensured that at the end of this substep the centre should remain in the right face, and the remaining edge should remain in the upper layer. The attached edge can be moved out of the U layer using an R move to enable the remaining edge to move freely in the U layer.</p>
             </div>
 
             <div class="box">
                 <center><img src="c.png"></center>
-                <h3>F2L</h3>
-                <p>The final corner edge pair is solved, typically intuitively. However, this can also be broken down into 20 cases. This is less than the typical CFOP last slot since EO is already done. The algorithms for each case can be found in the F2L algorithms section.</p>
+                <h3>Extension</h3>
+                <p>The remaining edge now is connected the centre opposite to the first edge. This can sometimes be done using only R and U moves, though sometimes it may be required to place the connected edge in BR and the remaining edge in UF and doing u' R u; this depends on the orientation of the remaining edge. Following this, the extension can be attached to the line in DL using an appropriate R move and a u2. This completes a 1x2x3 block on left.</p>
             </div>
 
             <div class="box">
                 <center><img src="d.png"></center>
-                <h3>2GLL</h3>
-                <p>Since CP and EO are already done, the last layer can be done using one of only 84 algorithms, all of which are 2-gen. Every case and beginners' recognition techniques are listed in the 2GLL section. Different ways to finish can be found in the advanced section.</p>
+                <h3>pEO</h3>
+                <p>Now, we need to ensure that the DB edge is correctly oriented, while placing either the U or the D centre in the U face. If an F or B centre is in the top face, bring a misoriented edge in UB using R and U moves, and do an r move; else bring an oriented edge to UF and do an r2 move (which is better than checking the orientation of DB and taking action accordingly). In this process, one may attempt to preserve good edges by pushing them out of the M slice.</p>
             </div>
         </div>
     </section>
@@ -136,22 +136,23 @@
     <section id="bar">
         <div class="container">
             <div class="info">
-                <p>Average movecount: ~ 14
+                <p>Average movecount: ~ 11
             </div>
 
             <div class="info">
-                <p>Average double moves: ~ 4
+                <p>Average double moves: ~ 3
             </div>
 
             <div class="info">
-                <p>Algorithms: 20
+                <p>Algorithms: 0
             </div>
         </div>
     </section>
 
     <section id="rest">
         <div class="container">
-            <p>If no F2L block is preserved at the end of the EOBF step, the square can be constructed using any F2L edge, connected with an adjacent corner edge pair. The sole edge needs to be attached to the right centre and placed down such that the following corner edge pair is set up to a good case, with a possibility of cancellations into insertion of the pair. There isn't exactly a practical algorithmic way to do this, experience and analysis of examples will over time build the repertoire required to handle each case almost optimally. The general rule of thumb is, 3 move inserts are better than split pairs in top layer, which are in turn better than incorrectly connected pairs in the top layer, which are better than pairs with one piece not in the top layer, and so on.</p>
+            <p>The pEO extension step is easily the trickiest step in the entire method, this here is the extreme beginner version of this step. Over time, it is expected for one to fuse the first three substeps here to directly make the extension, while doing the partial edge orientation at some point in the middle of it.</p>
+            <p>There is an algorthmic way to handle this step which is slightly inefficient but has a more concrete effect on EO as compared to intuititve pEO extension. This beginners' approach is a good stepping stone to both the intuitive version and the algorithmic version.</p>
         </div>
     </section>
 
